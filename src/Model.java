@@ -1,15 +1,20 @@
-import com.sun.jdi.event.MethodExitEvent;
+
 
 public class Model {
 
     private InputLayer inputLayer;
-    private HideLayer[] hideLayers;
     private ExitLayer exitLayer;
-    int hideLayersSize;
-    int[] input;
+    private int numberOfNodes;
 
+    public Model(int numOfInputNodes, int numOfNodes, int numOfExitNodes) {
 
-    public Model() {}
+        for(int i = 0; i < numOfInputNodes; i++){
+            Node node
+        }
 
+    }
 
+    void receiveBiasAndWheightValues() {
+
+    }
 }

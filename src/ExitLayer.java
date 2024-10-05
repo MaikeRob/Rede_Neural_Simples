@@ -1,2 +1,4 @@
-public class ExitLayer {
+public class ExitLayer extends Layer {
+
+    
 }
