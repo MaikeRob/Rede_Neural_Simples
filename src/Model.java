@@ -4,17 +4,25 @@ public class Model {
 
     private InputLayer inputLayer;
     private ExitLayer exitLayer;
-    private int numberOfNodes;
 
-    public Model(int numOfInputNodes, int numOfNodes, int numOfExitNodes) {
+    public Model(int numOfInputNodes, int numberOfNodes, int numOfExitNodes) {
 
-        for(int i = 0; i < numOfInputNodes; i++){
-            Node node
-        }
+        ExitLayer exitLayer = new ExitLayer(numOfExitNodes);
+        Layer hiddenLayer = new Layer(numberOfNodes);
+        hiddenLayer.nextLayer = exitLayer;
+        InputLayer inputLayer = new InputLayer(numOfInputNodes);
+        inputLayer.nextLayer = hiddenLayer;
+
+
+
 
     }
 
     void receiveBiasAndWheightValues() {
 
+    }
+
+    void inputData(float[] data) {
+        this.inputLayer.receiveData(data);
     }
 }
