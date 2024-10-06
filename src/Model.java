@@ -13,16 +13,15 @@ public class Model {
         InputLayer inputLayer = new InputLayer(numOfInputNodes);
         inputLayer.nextLayer = hiddenLayer;
 
-
-
-
     }
 
     void receiveBiasAndWheightValues() {
 
     }
 
-    void inputData(float[] data) {
+    void predict(float[] data) {
         this.inputLayer.receiveData(data);
     }
+
+
 }

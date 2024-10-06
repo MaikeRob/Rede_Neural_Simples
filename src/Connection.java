@@ -4,8 +4,10 @@ public class Connection {
     private Node to;
     private float weight;
 
-    public Connection(Node from, Node to, float weight) {
-
+    public Connection(Node from, Node to) {
+        weight = (float) (Math.random() * 2 - 1);
+        this.from = from;
+        this.to = to;
     }
     
 }

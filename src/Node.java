@@ -5,10 +5,7 @@ public class Node{
 
 
     public Node() {
-        this.bias = (float) (Math.random() * 2 - 1);
-        for (int i = 0; i < ; i++) {
-
-        }
+        this.bias = 0;
     }
 
     public float getBias() {
@@ -19,5 +16,11 @@ public class Node{
         this.bias = bias;
     }
 
-    private createConnnections(Layer nextLayer)
+    public void createConnections(Layer nextLayer) {
+        connections = new Connection[nextLayer.size];
+        for (int i = 0; i < nextLayer.size; i++) {
+            connections[i] = new Connection(this, nextLayer.nodes[i]);
+
+        }
+    }
 }
